@@ -1,0 +1,3 @@
+import {authRateLimit,issueSession,loginAccount,requireSameOrigin} from '../../../../lib/auth-service';
+import {normalizeEmail} from '../../../../lib/auth-core';
+export async function POST(request:Request){try{requireSameOrigin(request);const text=await request.text();if(text.length>4000)throw new Error('Dữ liệu quá lớn.');const body=JSON.parse(text),email=normalizeEmail(body.email);await authRateLimit(request,email);const user=await loginAccount(email,body.password);return Response.json({ok:true},{headers:{'Set-Cookie':await issueSession(user.userId),'Cache-Control':'no-store'}});}catch(e){return Response.json({error:e instanceof Error?e.message:'Không thể đăng nhập lúc này.'},{status:400,headers:{'Cache-Control':'no-store'}});}}

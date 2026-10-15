@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792028602093,
+      "tag": "0000_worried_blacklash",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792029217705,
+      "tag": "0001_wooden_betty_ross",
+      "breakpoints": true
+    }
+  ]
+}

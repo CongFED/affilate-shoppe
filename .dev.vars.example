@@ -1,0 +1,12 @@
+# Configure these as hosted runtime secrets; never commit values.
+SHOPEE_APP_ID=
+SHOPEE_APP_SECRET=
+# Enable only after validating Open API access and attribution with your account.
+SHOPEE_ENABLED=false
+# Stable Site user ID(s), comma-separated, copied from Settings.
+ADMIN_USER_IDS=
+
+# Google OAuth Web Application credentials (server-side secrets)
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+AUTH_APP_ORIGIN=http://localhost:5173
